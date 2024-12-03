@@ -10,18 +10,14 @@ class SOTIETKIEM {
         this.ngayMoSo = ngayMoSo;
         this.soTienGui = soTienGui;
     }
-
     kiemTraHopLe() {
         if (this.maSo.length > 5 || this.loaiTietKiem.length > 10 || this.hoTenKhachHang.length > 30) {
             return "Dữ liệu không hợp lệ: Vui lòng kiểm tra lại các trường.";
         }
-
         const ngayRegex = /^\d{4}-\d{2}-\d{2}$/;
-
         if (!ngayRegex.test(this.ngayMoSo)) {
             return "Ngày mở sổ không hợp lệ.";
         }
-
         if (isNaN(this.cmnd) || this.cmnd.toString().length !== 9) {
             return "Chứng minh nhân dân không hợp lệ.";
         }

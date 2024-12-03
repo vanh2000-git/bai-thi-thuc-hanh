@@ -5,11 +5,28 @@
     <title>So tiet kiem</title>
 </head>
 <style>
-    .error {
+    #errorMessages {
         color: red;
         font-weight: bold;
     }
 
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f7fc;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+    .container {
+        width: 80%;
+        max-width: 1000px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+    }
 
 </style>
 <body>
@@ -44,7 +61,7 @@
         <input type="text" id="maSoXoa" required>
         <button type="button" onclick="xoaSoTietKiem()">Xóa Sổ Tiết Kiệm</button>
     </form>
-    <div id="errorMessages" ></div>
+    <div id="errorMessages"></div>
 
     <div class="list-container">
         <h3>Danh Sách Sổ Tiết Kiệm</h3>
@@ -52,6 +69,6 @@
         </ul>
     </div>
 </div>
-    <script src="cau-3.js"></script>
+<script src="cau-3.js"></script>
 </body>
 </html>
