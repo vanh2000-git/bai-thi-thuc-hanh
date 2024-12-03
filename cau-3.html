@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So tiet kiem</title>
+</head>
+<style>
+    .error {
+        color: red;
+        font-weight: bold;
+    }
+
+
+</style>
+<body>
+<div class="container">
+    <h2>Quản Lý Sổ Tiết Kiệm</h2>
+    <h3>Thêm Sổ Tiết Kiệm</h3>
+    <form id="formSoTietKiem">
+        <label for="maSo">Mã Số (Tối đa 5 ký tự):</label>
+        <input type="text" id="maSo" required>
+        <br>
+        <label for="loaiTietKiem">Loại Tiết Kiệm (Tối đa 10 ký tự):</label>
+        <input type="text" id="loaiTietKiem" required>
+        <br>
+        <label for="hoTen">Họ Tên Khách Hàng (Tối đa 30 ký tự):</label>
+        <input type="text" id="hoTen" required>
+        <br>
+        <label for="cmnd">Chứng Minh Nhân Dân (9 chữ số):</label>
+        <input type="number" id="cmnd" required>
+        <br>
+        <label for="ngayMoSo">Ngày Mở Sổ (yyyy-mm-dd):</label>
+        <input type="text" id="ngayMoSo" required>
+        <br>
+        <label for="soTienGui">Số Tiền Gửi:</label>
+        <input type="number" id="soTienGui" required>
+        <br>
+        <button type="button" onclick="themSoTietKiem()">Thêm Sổ Tiết Kiệm</button>
+    </form>
+
+    <h3>Xóa Sổ Tiết Kiệm</h3>
+    <form id="formXoaSoTietKiem">
+        <label for="maSoXoa">Nhập Mã Sổ Tiết Kiệm Cần Xóa:</label>
+        <input type="text" id="maSoXoa" required>
+        <button type="button" onclick="xoaSoTietKiem()">Xóa Sổ Tiết Kiệm</button>
+    </form>
+    <div id="errorMessages" ></div>
+
+    <div class="list-container">
+        <h3>Danh Sách Sổ Tiết Kiệm</h3>
+        <ul id="danhSachSoTietKiem">
+        </ul>
+    </div>
+</div>
+    <script src="cau-3.js"></script>
+</body>
+</html>
